@@ -1,0 +1,249 @@
+:root {
+    /* Primary colors */
+    --Pink: hsl(322, 100%, 66%);
+    --Light-Pink: hsl(321, 100%, 78%);
+    --Light-Red: hsl(0, 100%, 63%);
+    --white : #fff;
+    --ligth-ash: rgb(190, 190, 190);
+
+    /* Neutral colors */
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Very-Pale-Blue: hsl(207, 100%, 98%);
+    --blue: hsl(240, 72.73%, 63.53%);
+
+}
+nav a {
+    color: var(--Pink);
+    border: 1px solid var(--Pink);
+    border-radius: 25px;
+}
+
+h1, h2:not(footer h2), h3 {
+    font-family: "Poppins", sans-serif ;
+    font-weight: 700 ;
+    color: var(--Very-Dark-Cyan);
+    line-height: 1.5;
+}
+
+p:not(footer p) {
+    font-family: "Open sans", sans-serif;
+    color: var(--Very-Dark-Cyan);
+    font-weight: 400 ;
+}
+
+.button {
+    background-color: var(--Pink);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    color: var(--white);
+    box-shadow: 2px 3px 10px var(--ligth-ash);
+}
+
+
+/* socials section styling */
+.social-content {
+    width: 200px;
+}
+
+.social-content img {
+    width: 25px;
+}
+
+.social-content h1 {
+    font-size: 60px;
+}
+
+.footer-wrap {
+    background-color: var(--Very-Dark-Cyan);
+}
+
+footer {
+    color: var(--white);
+}
+
+footer button {
+    color: var(--white);
+    background-color: var(--Pink);
+    border: none;
+}
+
+
+.footer-logo {
+    filter: grayscale(100%) brightness(10000%);
+
+}
+.contact img {
+    margin-right: 15px;
+}
+
+.contact a {
+    color: var(--white);
+}
+
+.button:hover, footer button:hover {
+    background-color: var(--Light-Pink);
+}
+
+nav a:hover {
+    border-color: var(--Light-Pink);
+    color: var(--Light-Pink);
+}
+
+.content {
+    background-color: var(--Very-Pale-Blue);
+}
+
+#icons svg:hover {
+    color: var(--blue);
+}
+
+@media only screen and (max-width: 768px) {
+    nav img, .footer-logo {
+        width: 150px;
+        height: 25px;
+    }
+
+    .illustration {
+        width: 100%;
+    }
+
+ 
+
+    .social-content {
+        margin: 0 auto;
+    }
+
+    #grow, #conversation, #users, #build-community {
+        margin: 150px 0;
+    }
+
+
+    #grow::before, #grow::after,  #users::before, #users::after, footer::before  {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top ;
+       
+       
+    }
+
+    #grow::before {
+        background-image: url("images/bg-section-top-mobile-1.svg");
+    }
+
+    #grow::after {
+        height: 100px;
+        background-image:url("images/bg-section-top-mobile-2.svg");
+        transform: rotate(180deg);
+        background-position: top right;
+        
+    }
+
+
+  
+    #users::before {
+        background-image: url("images/bg-section-bottom-mobile-1.svg");
+        transform: rotate(180deg);
+        background-size: 100% 100%;
+    }
+
+    #users::after {
+        background-image: url("images/bg-section-bottom-mobile-2.svg");
+    }
+
+    #huddle-tag {
+        margin-top: 50px;
+    }
+
+    .contact a img {
+        width: 20px;
+    }
+
+
+    footer::before {
+        height: 50px;
+        background-image: url("images/bg-footer-top-mobile.svg");
+        background-size: 100% 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    footer button {
+        margin-top: 15px ;
+        float: right;
+        display: block;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 769px) {
+    nav img {
+        width: 150px;
+    }
+
+    section {
+        margin: 150px 0;
+    }
+
+    .text-major {
+        width: 500px;
+    }
+
+    header .illustration {
+        /* width: calc(90vw - 50vh) ; */
+        width: 850px;
+    }
+
+    .social-content {
+        margin: 0 100px;
+    }
+
+    h2, p:not(header p) {
+        text-align: left;
+    }
+
+    #grow::before, #grow::after, #users::before, #users::after, footer::before {
+        content: "";
+        display: block;
+        height: 100px;
+        width: 100%;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    #grow::before {
+        background-image: url("images/bg-section-top-desktop-1.svg");
+    }
+
+    #grow::after {
+        background-image: url("images/bg-section-top-desktop-2.svg");
+        transform: rotate(180deg);
+    }
+
+    #users::before {
+        background-image: url('images/bg-section-bottom-desktop-1.svg');
+        transform: rotate(180deg);
+    }
+
+    #users::after {
+        background-image: url("images/bg-section-bottom-desktop-2.svg");
+    }
+
+    footer::before {
+        background-image: url("images/bg-footer-top-desktop.svg");
+    }
+
+    footer button {
+        margin: 0 30px;
+    }
+
+}
+
